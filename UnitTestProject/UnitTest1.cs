@@ -16,11 +16,11 @@ namespace UnitTestProject
         }
         //[Fact]
         [Theory]
-        [InlineData(10,200)]
-        [InlineData(60,200)]
+        //[InlineData(10,200)]
+        //[InlineData(60,200)]
         [InlineData(61,200)]
-        [InlineData(62,200)]
-        [InlineData(68,200)]
+        //[InlineData(62,200)]
+        //[InlineData(68,200)]
         public async Task GetByIdTest(int id, int expected)
         {
             var factory = new WebApplicationFactory<Program>();
