@@ -1,3 +1,4 @@
+using CoreApisProject.Middlewares;
 using CoreApisProject.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,7 +27,11 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+//app.Use((context, next) =>
+//{
+//    return next(context);
+//});
+//app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 app.MapControllers();
 
 app.Run();

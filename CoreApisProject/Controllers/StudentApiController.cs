@@ -25,5 +25,12 @@ namespace CoreApisProject.Controllers
         {
             return await db.Students.FindAsync(id);
         }
+        [HttpPost]
+        [Route("api/student")]
+        public async Task<Student> Add(Student s)
+        {
+          await db.Students.AddAsync (s);
+            return s;
+        }
     }
 }
